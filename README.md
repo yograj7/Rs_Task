@@ -1,5 +1,4 @@
 
-````md
 # Java JDBC Projects – Student, Employee & Shopping Cart Management
 
 ## 📌 Overview
@@ -61,7 +60,7 @@ It demonstrates core JDBC operations such as inserting, fetching, updating, and 
 - **Query:**
 ```sql
 UPDATE student SET marks = ? WHERE id = ?;
-````
+
 
 ---
 
