@@ -10,7 +10,7 @@ All applications use:
 - **PreparedStatement (Parameterized Queries)**
 - **Menu-driven switch-case programs**
 
-This repository is suitable for **academic practicals, viva, and JDBC fundamentals**.
+This repository is suitable for **academic practicals and JDBC fundamentals**.
 
 ---
 
@@ -132,5 +132,4 @@ Improves performance
 Ensures secure input handling
 
 ### 👨‍💻 Author
-
 Yograj Patil
