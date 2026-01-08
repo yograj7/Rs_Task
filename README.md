@@ -1,2 +1,27 @@
-# Rs_Task
-This repository contains hands-on Java programs demonstrating JDBC-based CRUD operations using Oracle Database. It covers table creation, insert, update, delete, and select operations using PreparedStatement, Scanner, and menu-driven switch-case. The project is structured with separate classes for database operations and main application logic
+# Java JDBC CRUD Operations Project
+
+This repository contains Java programs demonstrating JDBC-based database operations using Oracle Database. The project is designed for learning and practicing core JDBC concepts through real-world examples.
+
+---
+
+## 📌 Features
+- Database connection using JDBC
+- CRUD operations (Create, Read, Update, Delete)
+- Parameterized queries using PreparedStatement
+- Menu-driven programs using switch case
+- User input handling using Scanner
+- Clean separation of logic using multiple classes
+
+---
+
+## 🛠️ Technologies Used
+- Java
+- JDBC
+- Oracle Database
+- SQL
+- IntelliJ IDEA
+- Git & GitHub
+
+---
+
+## 📂 Project Structure
