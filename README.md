@@ -57,13 +57,19 @@ It demonstrates JDBC operations such as inserting, fetching, updating, and delet
 #### 4️⃣ Update Student (Update)
 - **File:** `Update.java`
 - **Function:** Updates student marks using Student ID.
-- **Query:**
-   UPDATE student SET marks = ? WHERE id = ?;
+- **Query:** UPDATE student SET marks = ? WHERE id = ?;
+
+---
 
 #### 5️⃣ Delete Student (Delete)
-File: Delete.java
+- **File:** `Delete.java`
+- **Function:** Deletes a student record permanently based on Student ID.
+- **Query:**
+  ```sql
+UPDATE student SET marks = ? WHERE id = ?;
 
-Function: Deletes a student record permanently based on Student ID.
+---
+
 
 ## 🧩 Project 2: Employee Management System
 ### 🔎 Description
@@ -91,6 +97,7 @@ City
 
 Contact Number
 
+---
 
 ## 🧩 Project 3: Product Management System
 📌 Description
@@ -118,6 +125,8 @@ Price
 
 Quantity
 
+---
+
 ## 💻 Technical Highlights
 ### 🛡️ PreparedStatement (Parameterized Queries)
 
@@ -131,5 +140,7 @@ Improves performance
 
 Ensures secure input handling
 
-### 👨‍💻 Author
-Yograj Patil
+---
+
+## 👨‍💻 Author
+   Yograj Patil
