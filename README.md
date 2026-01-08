@@ -58,22 +58,20 @@ It demonstrates JDBC operations such as inserting, fetching, updating, and delet
 - **File:** `Update.java`
 - **Function:** Updates student marks using Student ID.
 - **Query:**
-```sql
-UPDATE student SET marks = ? WHERE id = ?;
+   UPDATE student SET marks = ? WHERE id = ?;
 
-5️⃣ Delete Student (Delete)
-
+#### 5️⃣ Delete Student (Delete)
 File: Delete.java
 
 Function: Deletes a student record permanently based on Student ID.
 
-🧩 Project 2: Employee Management System
-🔎 Description
+## 🧩 Project 2: Employee Management System
+### 🔎 Description
 
 The Employee Management System manages employee records such as name, city, and contact number using Oracle Database.
 It uses menu-driven switch-case logic and separates database operations from the main application.
 
-📂 Features
+### 📂 Features
 
 Insert employee details
 
@@ -83,7 +81,7 @@ Display employees by city
 
 Secure operations using PreparedStatement
 
-🗃️ Employee Table Fields
+#### 🗃️ Employee Table Fields
 
 Employee ID
 
@@ -94,13 +92,13 @@ City
 Contact Number
 
 
-🧩 Project 3: Product Management System
+## 🧩 Project 3: Product Management System
 📌 Description
 
 The Product Management System handles product inventory operations using Oracle Database.
 It allows administrators to create, insert, update, and delete product records.
 
-📂 Features
+### 📂 Features
 
 Create product table
 
@@ -110,7 +108,7 @@ Update product quantity
 
 Delete product by ID
 
-🗃️ Product Table Fields
+### 🗃️ Product Table Fields
 
 Product ID
 
@@ -120,8 +118,8 @@ Price
 
 Quantity
 
-💻 Technical Highlights
-🛡️ PreparedStatement (Parameterized Queries)
+## 💻 Technical Highlights
+### 🛡️ PreparedStatement (Parameterized Queries)
 
 All database operations use PreparedStatement.
 
@@ -133,6 +131,6 @@ Improves performance
 
 Ensures secure input handling
 
-👨‍💻 Author
+### 👨‍💻 Author
 
 Yograj Patil
