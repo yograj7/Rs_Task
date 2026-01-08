@@ -12,7 +12,6 @@ All applications use:
 
 This repository is suitable for **academic practicals and JDBC fundamentals**.
 
----
 
 ## 🛠️ Prerequisites
 - Java Development Kit (JDK)
@@ -21,7 +20,7 @@ This repository is suitable for **academic practicals and JDBC fundamentals**.
 - Username: `system`
 - IDE: IntelliJ IDEA / Eclipse (optional)
 
----
+
 
 ## 🧩 Project 1: Student Management System
 
@@ -29,7 +28,7 @@ This repository is suitable for **academic practicals and JDBC fundamentals**.
 The Student Management System consists of multiple Java applications designed to manage a `student` table in Oracle Database.  
 It demonstrates JDBC operations such as inserting, fetching, updating, and deleting student records using **PreparedStatement**.
 
----
+
 
 ### 📂 Modules & Files
 
@@ -38,37 +37,35 @@ It demonstrates JDBC operations such as inserting, fetching, updating, and delet
 - **Purpose:** Establishes a connection to the Oracle Database using the SYSTEM user.
 - **Output:** Displays *“Database connection successful”*.
 
----
+
 
 #### 2️⃣ Fetch Student Records (Read)
 - **File:** `Student.java`
 - **Function:** Retrieves and displays all records from the `student` table.
 - **Fields:** ID, Name, Age
 
----
+
 
 #### 3️⃣ Insert Student (Create)
 - **File:** `Input.java`
 - **Function:** Accepts student details from the user using `Scanner` and inserts them into the table.
 - **Security:** Uses parameterized queries (`PreparedStatement`).
 
----
+
 
 #### 4️⃣ Update Student (Update)
 - **File:** `Update.java`
 - **Function:** Updates student marks using Student ID.
 - **Query:** UPDATE student SET marks = ? WHERE id = ?;
 
----
+
 
 #### 5️⃣ Delete Student (Delete)
 - **File:** `Delete.java`
 - **Function:** Deletes a student record permanently based on Student ID.
-- **Query:**
-  ```sql
-UPDATE student SET marks = ? WHERE id = ?;
+- **Query:** UPDATE student SET marks = ? WHERE id = ?;
 
----
+
 
 
 ## 🧩 Project 2: Employee Management System
@@ -97,7 +94,7 @@ City
 
 Contact Number
 
----
+
 
 ## 🧩 Project 3: Product Management System
 📌 Description
@@ -125,7 +122,7 @@ Price
 
 Quantity
 
----
+
 
 ## 💻 Technical Highlights
 ### 🛡️ PreparedStatement (Parameterized Queries)
@@ -140,7 +137,6 @@ Improves performance
 
 Ensures secure input handling
 
----
 
 ## 👨‍💻 Author
-   Yograj Patil
+####   Yograj Patil
