@@ -1,24 +1,24 @@
-
-# Java JDBC Projects – Student, Employee & Shopping Cart Management
+# Java JDBC Projects – Student, Employee & Product Management (Oracle DB)
 
 ## 📌 Overview
-This repository contains multiple **Java console-based applications** developed using **JDBC (Java Database Connectivity)** to interact with a **MySQL database**.  
-The projects demonstrate **secure, modular, and real-world database operations**, covering the complete lifecycle from database connection to CRUD (Create, Read, Update, Delete) operations.
+This repository contains multiple **Java console-based applications** developed using **JDBC (Java Database Connectivity)** to interact with an **Oracle Database**.  
+The projects demonstrate **secure and modular database operations**, covering the complete lifecycle from database connection to CRUD (Create, Read, Update, Delete) operations.
 
-The repository includes:
-- **Student Management System**
-- **Employee Management System**
-- **Shopping Cart / Product Management System**
+All applications use:
+- **Oracle JDBC Driver**
+- **SYSTEM user**
+- **PreparedStatement (Parameterized Queries)**
+- **Menu-driven switch-case programs**
 
-All modules follow **industry best practices** such as parameterized queries, external configuration, and clean code separation.
+This repository is suitable for **academic practicals, viva, and JDBC fundamentals**.
 
 ---
 
 ## 🛠️ Prerequisites
 - Java Development Kit (JDK)
-- MySQL Database Server
-- MySQL JDBC Driver (`com.mysql.cj.jdbc.Driver`)
-- Database Name: `advjava`
+- Oracle Database (10g / 11g / XE)
+- Oracle JDBC Driver (`ojdbc14.jar` or compatible)
+- Username: `system`
 - IDE: IntelliJ IDEA / Eclipse (optional)
 
 ---
@@ -26,8 +26,8 @@ All modules follow **industry best practices** such as parameterized queries, ex
 ## 🧩 Project 1: Student Management System
 
 ### 🔎 Description
-The Student Management System consists of multiple Java applications designed to manage a `student` table.  
-It demonstrates core JDBC operations such as inserting, fetching, updating, and deleting student records using **PreparedStatement**.
+The Student Management System consists of multiple Java applications designed to manage a `student` table in Oracle Database.  
+It demonstrates JDBC operations such as inserting, fetching, updating, and deleting student records using **PreparedStatement**.
 
 ---
 
@@ -35,21 +35,21 @@ It demonstrates core JDBC operations such as inserting, fetching, updating, and 
 
 #### 1️⃣ Database Connection
 - **File:** `DBConnection.java`
-- **Purpose:** Establishes a connection with the MySQL database.
+- **Purpose:** Establishes a connection to the Oracle Database using the SYSTEM user.
 - **Output:** Displays *“Database connection successful”*.
 
 ---
 
 #### 2️⃣ Fetch Student Records (Read)
 - **File:** `Student.java`
-- **Function:** Retrieves and displays all student records.
+- **Function:** Retrieves and displays all records from the `student` table.
 - **Fields:** ID, Name, Age
 
 ---
 
 #### 3️⃣ Insert Student (Create)
 - **File:** `Input.java`
-- **Function:** Accepts student details using `Scanner` and inserts them into the database.
+- **Function:** Accepts student details from the user using `Scanner` and inserts them into the table.
 - **Security:** Uses parameterized queries (`PreparedStatement`).
 
 ---
@@ -61,126 +61,78 @@ It demonstrates core JDBC operations such as inserting, fetching, updating, and 
 ```sql
 UPDATE student SET marks = ? WHERE id = ?;
 
+5️⃣ Delete Student (Delete)
 
----
+File: Delete.java
 
-#### 5️⃣ Delete Student (Delete)
+Function: Deletes a student record permanently based on Student ID.
 
-* **File:** `Delete.java`
-* **Function:** Deletes a student record permanently based on ID.
+🧩 Project 2: Employee Management System
+🔎 Description
 
----
+The Employee Management System manages employee records such as name, city, and contact number using Oracle Database.
+It uses menu-driven switch-case logic and separates database operations from the main application.
 
-## 🧩 Project 2: Employee Management System
+📂 Features
 
-### 🔎 Description
+Insert employee details
 
-The Employee Management System handles employee records such as personal details and contact information.
-It demonstrates CRUD operations with a **menu-driven switch-case approach** and proper separation of logic.
+Update employee contact number
 
----
+Display employees by city
 
-### 📂 Features
+Secure operations using PreparedStatement
 
-* Insert new employee records
-* Update employee contact details
-* Fetch employees based on city
-* Secure database access using PreparedStatement
+🗃️ Employee Table Fields
 
----
+Employee ID
 
-### 🗃️ Employee Table Fields
+Employee Name
 
-* Employee ID
-* Employee Name
-* City
-* Contact Number
+City
 
----
-
-## 🧩 Project 3: Shopping Cart & Product Management System
-
-### 📌 Description
-
-This project simulates the backend of an **E-commerce platform**, supporting both **Admin** and **User** operations.
-It manages product inventory and shopping cart functionality using JDBC.
-
----
-
-## 🚀 Key Features
-
-### 🔐 Product Management (Admin Module)
-
-* Add new products (ID, Name, Price, Quantity)
-* Update product price or stock
-* Delete obsolete products
-
----
-
-### 🛒 Cart Management (User Module)
-
-* Add products to cart
-* Update item quantities
-* View cart details with pricing
-* Remove items from cart
-
----
-
-## 💻 Technical Highlights
-
-### 🛡️ PreparedStatement (Parameterized Queries)
-
-All database operations use `PreparedStatement`.
-
-**Benefits:**
-
-* Prevents SQL Injection
-* Improves performance
-* Ensures secure user input handling
-
-**Example:**
-
-```java
-String sql = "INSERT INTO product VALUES (?, ?, ?, ?)";
-PreparedStatement stmt = con.prepareStatement(sql);
-
-stmt.setInt(1, id);
-stmt.setString(2, name);
-stmt.setDouble(3, price);
-stmt.setInt(4, quantity);
-
-stmt.executeUpdate();
-```
-
----
-
-### ⚙️ External Configuration (Properties File)
-
-Database credentials are stored in a `database.properties` file:
-
-* Database URL
-* Driver Class Name
-* Username
-* Password
-
-This follows **enterprise-level best practices** and improves security and maintainability.
-
----
-
-## 🎯 Learning Outcomes
-
-* Hands-on experience with JDBC architecture
-* Implement secure CRUD operations
-* Apply modular and menu-driven program design
-* Understand real-world database interaction
-* Practice Git and GitHub version control
-
----
-
-## 👨‍💻 Author
-
-**Yograj Patil**
-
----
+Contact Number
 
 
+🧩 Project 3: Product Management System
+📌 Description
+
+The Product Management System handles product inventory operations using Oracle Database.
+It allows administrators to create, insert, update, and delete product records.
+
+📂 Features
+
+Create product table
+
+Insert product details
+
+Update product quantity
+
+Delete product by ID
+
+🗃️ Product Table Fields
+
+Product ID
+
+Product Name
+
+Price
+
+Quantity
+
+💻 Technical Highlights
+🛡️ PreparedStatement (Parameterized Queries)
+
+All database operations use PreparedStatement.
+
+Benefits:
+
+Prevents SQL Injection
+
+Improves performance
+
+Ensures secure input handling
+
+👨‍💻 Author
+
+Yograj Patil
