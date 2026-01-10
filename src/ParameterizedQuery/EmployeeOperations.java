@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EmployeeOperations {
     String url = "jdbc:oracle:thin:@localhost:1521:XE";
     String user = "system";
-    String password = "Yograj@2004";
+    String password = "root";
 
     // INSERT EMPLOYEE
     public void insertEmployee() {
