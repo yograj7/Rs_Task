@@ -9,7 +9,7 @@ public class OracleDBConnection {
         String driver = "oracle.jdbc.driver.OracleDriver";
         String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String username = "system";
-        String password = "Yograj@2004";
+        String password = "root";
 
         try {
             // Step 1: Load Driver
