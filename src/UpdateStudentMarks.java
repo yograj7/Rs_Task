@@ -7,7 +7,7 @@ public class UpdateStudentMarks {
 
         String url = "jdbc:oracle:thin:@localhost:1521:XE";
         String user = "system";
-        String password = "Yograj@2004";
+        String password = "root";
 
         Scanner sc = new Scanner(System.in);
 
