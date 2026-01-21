@@ -1,0 +1,54 @@
+import java.sql.*;
+import java.util.Scanner;
+
+public class LoginSystem {
+
+    public static void main(String[] args) {
+
+        String url = "jdbc:oracle:thin:@localhost:1521:XE";
+        String dbUser = "system";
+        String dbPassword = "oracle";
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Username: ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter Password: ");
+        String password = sc.nextLine();
+
+        try {
+            // 1. Load Driver
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+
+            // 2. Create Connection
+            Connection con = DriverManager.getConnection(url, dbUser, dbPassword);
+
+            // 3. Prepare SQL Query
+            String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1, username);
+            ps.setString(2, password);
+
+            // 4. Execute Query
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                System.out.println(" Login Successful!");
+            } else {
+                System.out.println(" Invalid Credentials!");
+            }
+
+            // 5. Close Resources
+            rs.close();
+            ps.close();
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        sc.close();
+    }
+}
